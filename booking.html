@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room | Grand Haven Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar container">
+        <a href="index.html" class="logo">GRAND HAVEN</a>
+        <button class="menu-toggle" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="main-nav">☰</button>
+        <ul class="nav-links" id="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="btn active" href="booking.html">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="page-banner">
+        <h1>Book Your Stay</h1>
+        <p>Plan your visit to Grand Haven Hotel.</p>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Reservation Request</h2>
+        <p class="section-intro">
+            Enter your details and choose the accommodation you prefer.
+        </p>
+
+        <div class="form-wrapper">
+            <form id="booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" name="guests"
+                               min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="room">Choose Your Room</label>
+                        <select id="room" name="room" required>
+                            <option value="" data-price="0">Select a room</option>
+                            <option value="Deluxe Room" data-price="80000">Deluxe Room — ₦80,000/night</option>
+                            <option value="Executive Suite" data-price="150000">Executive Suite — ₦150,000/night</option>
+                            <option value="Presidential Suite" data-price="300000">Presidential Suite — ₦300,000/night</option>
+                            <option value="Twin Room" data-price="100000">Twin Room — ₦100,000/night</option>
+                            <option value="Family Room" data-price="180000">Family Room — ₦180,000/night</option>
+                            <option value="Luxury Villa" data-price="250000">Luxury Villa — ₦250,000/night</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="requests">Special Requests (Optional)</label>
+                        <textarea id="requests" name="requests"
+                                  placeholder="Any additional requirements?"></textarea>
+                    </div>
+                </div>
+
+                <p id="estimate" aria-live="polite">
+                    Select a room and dates to see an estimate.
+                </p>
+
+                <br>
+                <button type="submit" class="btn">Submit Booking Request</button>
+
+                <p id="booking-message" class="form-message"
+                   role="status" aria-live="polite" hidden></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span class="current-year"></span> Grand Haven Hotel.</p>
+        <p><a href="rooms.html">Browse Rooms</a> | <a href="contact.html">Contact Us</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
